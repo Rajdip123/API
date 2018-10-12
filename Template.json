@@ -1,0 +1,18 @@
+{
+  "q1imEnvironment" : "",
+  "systemUserName" : "",
+  "systemUserPassword" : "",
+  "systemRoles" : [ "" ],
+  "roleFullPath":  "",
+  "roleDescription":  "",
+  "roleOwners" : [ "" ],
+  "itShopShelf" : "",
+  "_links" : {
+    "self" : {
+              "href" : ""
+              },
+    "sarRole" : {
+              "href" : ""
+                }
+            }
+}
