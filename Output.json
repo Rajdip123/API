@@ -1,0 +1,18 @@
+{
+  "q1imEnvironment" : "Demo1",
+  "systemUserName" : "User1234",
+  "systemUserPassword" : "Password1234",
+  "systemRoles" : [ "" ],
+  "roleFullPath":  "Applications\\Developer Role\\ReadOnly Role",
+  "roleDescription":  "Access Management IT user Role",
+  "roleOwners" : [ "" ],
+  "itShopShelf" : "SAR+ Application",
+  "_links" : {
+    "self" : {
+              "href" : "https://github.com/Rajdip123/API/new/master/77d54925-3fd4-4f24-b825-f4795c03d408"
+              },
+    "sarRole" : {
+              "href" : "https://github.com/Rajdip123/API/new/master/77d54925-3fd4-4f24-b825-f4795c03d408"
+                }
+            }
+}
