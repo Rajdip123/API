@@ -1,0 +1,35 @@
+import requests
+import json
+
+url = "http://192.168.32.3/D1IMAppServer/auth/apphost"
+
+payload = "{\"authString\":\"Module=DialogUser;User=viadmin;Password=Abcd1234\"}"
+headers = {
+    'content-type': "application/json"
+    }
+sess = requests.session()
+r = sess.post(url, data=payload, headers=headers)
+ssid = sess.cookies["ss-id"]
+
+url1 = "http://192.168.32.3:80/D1IMAppServer/api/entity/Hardware/c6df1331-b51b-4f70-bd87-c64f60b44014"
+headers1 = {
+    'sessionId':ssid,
+    'content-type': "application/json"
+    }
+body= {
+  "values": {
+    #"Ident_Hardwarelist": "TEMPERATURE SENSOR99" #For Creating new Sensor
+      "CustomProperty01" : "PUTisWorking02"     #For 
+  }
+}
+
+body2 = json.dumps(body,sort_keys=True,indent=4)
+
+print("body\t",body2)
+
+r1 = sess.put(url1,data=body2,headers=headers1)
+#r1 = sess.get(url1,headers=headers1)
+print("--------------")
+print("Status:\t",r1.status_code)
+print("--------------")
+print("Output:\t",r1.text)
